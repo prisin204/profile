@@ -1,0 +1,251 @@
+:root{
+    --background:#F1FCEF;
+    --primaryColor:#3ADC2D;
+    --secondaryColor:#8D99EC;
+    --accentColor:#A35DE4;
+    --fontsColor:#040F03;
+    --buttonColor:#111;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+    color: var(--fontsColor);
+   
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: var(--background);
+}
+.firstBox{
+    margin-top: 3rem;
+    height: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.targetName{
+    background: linear-gradient(to right, var(--primaryColor), var(--accentColor),var(--secondaryColor));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.proPhoto{
+    height: 16rem;
+    width: 16rem;
+    border-radius: 50%;
+    border: 2px solid var(--accentColor);
+    overflow: hidden;
+}
+.nameBox{
+    height: 5rem;
+    border-radius: 8px;
+    border: 2px solid var(--accentColor);
+    display: flex;
+    justify-content: center;
+}
+.nameBox .targetName{
+    font-size: 4rem;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.secondBox{
+    width: 100%;
+    margin-top: 6rem;
+}
+.researchField{
+    width: 100%;
+}
+
+legend{
+    color: var(--secondaryColor);
+    font-size: 2rem; 
+    border: 2px solid var(--accentColor);
+    border-radius: 8px;
+    padding: 10px;
+}
+fieldset{
+    border: 2px solid var(--accentColor);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin:0.8rem 0.8rem 3rem 0.8rem;
+}
+fieldset p{
+    font-size: 1.4rem;
+}
+ul{
+    list-style-type: disc;
+}
+.thirdBox{
+    width: 100%;
+    height: 40%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+}
+.thirdBox h2{
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.nav{
+    width:100%;
+    margin: 2.6rem 0 2.6rem ;
+    display: flex;
+    row-gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.nav button p{
+    color: var(--buttonColor);
+    font-size: 1.1rem;
+}
+.fourthBox{
+    width: 100%;
+    border: 3px solid var(--accentColor);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+.fifthBox{
+    margin-top: 6rem;
+    padding: 1.3rem;
+    width: 100%;
+}
+.fifthBox h2{
+    font-size: 2.2rem;
+}
+.fifthBox p{
+    margin-top: 1rem;
+}
+.proPhoto img{
+    height: 100%;
+    width: 100%;
+ object-fit: cover;   
+}
+
+
+/* slider */
+.slider{
+    width: 100%;
+    height: var(--height);
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+    overflow: hidden;
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    height: var(--height);
+    width: var(--width);
+    border-radius: 8px;
+    background-color: #8D99EC;
+    position: absolute;
+    left: 100%;
+    animation: autoRun var(--animationSpeed) linear infinite;
+    transition: filter 0.4s;
+    animation-delay: calc((var(--animationSpeed) / var(--quantity)) * (var(--position) - 1));
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+@keyframes autoRun{
+    form{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+
+/* slider end */
+
+/* childSlider */
+
+.item .childSlider{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+.item .childSlider img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.item .childSlider .pre,.next{
+    height: 2.5rem;
+    width: 2.5rem;
+    position: absolute;
+    z-index: 22;
+    background-color: var(--accentColor);
+    top: 45%;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .15s ease-in-out;
+}
+.pre{
+    left: 0;
+}
+.next{
+    left: calc(100% - 2.5rem);
+}
+.pre,.next:hover{
+    background-color: var(--secondaryColor);
+    font-size: 3rem;
+}
+
+/* childSlider end */
+
+
+/* CSS for Buttons*/
+.button-62 {
+  background: var(--primaryColor);
+  border: 0;
+  border-radius: 8px;
+  color: var(--buttonColor);
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem var(--primaryColor), -.125rem -.125rem 1rem var(--primaryColor), .125rem .125rem 1rem var(--primaryColor);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem var(--primaryColor), -.125rem -.125rem 1rem var(--primaryColor), .125rem .125rem 1rem var(--primaryColor);
+}
