@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="port.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Port</title>
 </head>
-<body>
-    <div class="firstBox">
+<body class="bg-zinc-900">
+    <div class="firstBox mb-4">
         <div class="proPhoto">
             <img src="images/image2.jpeg" alt="">
         </div>
@@ -21,33 +22,25 @@
             <p class="targetName">Dr. Preetam Singh</p>
         </div>
     </div>
-    <div class="secondBox">
-        <div class="researchField">
-            <fieldset class="fieldset1">
-                <legend>Research Interest</legend>
-                <ul>
-                    <li>
-                        <p>Research work is based on Determination and Enhancement of Spin-Orbit Torque in 2D Non-Magnet/Ferromagnet Heterostructure.</p>
-                    </li>
-                </ul>
-            </fieldset>
-            <fieldset class="fieldset2">
-                <legend>Schools/Courses Attended</legend>
-                <ul>
-                    <li>
-                        <p>Attended the workshop on Advanced Simulation Methods: DFT, MD and Beyond" 
+    <div class="secondBox p-2"
+        <div class="researchField ">
+            <div class="fieldset1">
+                <p class="text-2xl mb-2">Research Interest</p>
+                <p class="text-slate-300"> Attended the workshop on Advanced Simulation Methods: DFT, MD and Beyond" 
+                    (ASM2019) organized by IIT Delhi.</p>
+            </div>
+            <div class="fieldsDivider h-px w-full bg-white mb-2 mt-2"></div>
+            <div class="fieldset2 ">
+                <p class="text-2xl mb-2">Schools/Courses Attended</p>
+                        <p class="text-slate-300"> Attended the workshop on Advanced Simulation Methods: DFT, MD and Beyond" 
                             (ASM2019) organized by IIT Delhi.</p>
-                    </li>
-                    <li>
-                        <p>Attended the “School on Characterization of materials” at IUAC New Delhi, organized by Inter University Accelerator Centre New-Delhi – 110067.</p>
-                    </li>
-                </ul>
-            </fieldset>
+                        <p class="text-slate-300">Attended the “School on Characterization of materials” at IUAC New Delhi, organized by Inter University Accelerator Centre New-Delhi – 110067.</p>
+            </div>
         </div>
     </div>
-
+    <div class="fieldsDivider h-px w-full bg-white mb-10 mt-2"></div>
     <!-- slider -->
-    <div class="slider" style="
+    <div class="slider mb-20" style="
     --height:300px;
     --width:500px;
     --quantity:4;
